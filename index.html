@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
+        integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="background"></div>
+    <main>
+        <div>Lorem ipsum dolor sit amet consectetur,</div>
+        <div>Lorem ipsum dolor sit amet consectetur,</div>
+        <div>Lorem ipsum dolor sit amet consectetur,</div>
+        <div>Lorem ipsum dolor sit amet consectetur,</div>
+        <div>Lorem ipsum dolor sit amet consectetur,</div>
+    </main>
+    <aside>
+        <div class="user-cover"><img src="./assets/user.jpg" alt=""></div>
+        <div class="username">
+            <h1>Anthony Finix</h1>
+        </div>
+        <div><p>Web Designs</p></div>
+        <div><p>Illustrations</p></div>
+        <div><p>Logos Designs</p></div>
+    </aside>
+    <script src="./main.js"></script>
+    <script>
+        var i = 0;
+        var cards = [...document.querySelectorAll('main > div')];
+        var cardsInterval = setInterval( ()=> animateCard(),200);
+        function animateCard(){
+            cards[i].classList.add('reveal');
+            i++;
+            if (cards.length == i) {
+                clearInterval(cardsInterval);
+            }
+        }
+    </script>
+</body>
+
+</html>
